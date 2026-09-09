@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+ <meta charset="UTF-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>التحقق من الأمان</title>
+
+ <style>
+
+ * {
+
+ box-sizing: border-box;
+
+ }
+
+ body {
+
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+ background-color: #f4f6f8;
+
+ display: flex;
+
+ justify-content: center;
+
+ align-items: center;
+
+ min-height: 100vh;
+
+ margin: 0;
+
+ padding: 20px;
+
+ }
+
+ .card {
+
+ background: #ffffff;
+
+ padding: 28px 24px;
+
+ border-radius: 16px;
+
+ box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+
+ text-align: center;
+
+ max-width: 380px;
+
+ width: 100%;
+
+ }
+
+ h3 {
+
+ margin-top: 0;
+
+ margin-bottom: 22px;
+
+ color: #1a1a1a;
+
+ font-size: 18px;
+
+ line-height: 1.5;
+
+ }
+
+ .captcha-box {
+
+ background: #f8f9fa;
+
+ border: 1px solid #e1e4e8;
+
+ border-radius: 8px;
+
+ padding: 14px 16px;
+
+ display: flex;
+
+ align-items: center;
+
+ justify-content: space-between;
+
+ margin-bottom: 22px;
+
+ }
+
+ .captcha-left {
+
+ display: flex;
+
+ align-items: center;
+
+ gap: 12px;
+
+ }
+
+ .captcha-box input[type="checkbox"] {
+
+ width: 22px;
+
+ height: 22px;
+
+ cursor: pointer;
+
+ accent-color: #007bff;
+
+ }
+
+ .captcha-text {
+
+ font-size: 14px;
+
+ color: #333333;
+
+ font-weight: 500;
+
+ }
+
+ .captcha-logo {
+
+ font-size: 10px;
+
+ color: #707070;
+
+ text-align: left;
+
+ line-height: 1.3;
+
+ }
+
+ .btn {
+
+ background-color: #007bff;
+
+ color: #ffffff;
+
+ padding: 14px 20px;
+
+ font-size: 16px;
+
+ border: none;
+
+ border-radius: 8px;
+
+ cursor: pointer;
+
+ width: 100%;
+
+ display: none;
+
+ font-weight: bold;
+
+ text-decoration: none;
+
+ text-align: center;
+
+ transition: background-color 0.2s ease;
+
+ }
+
+ .btn:hover {
+
+ background-color: #0056b3;
+
+ }
+
+ </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+ <h3>يرجى تأكيد أنك لست روبوت للوصول إلى الرابط</h3>
+
+ <div class="captcha-box">
+
+ <div class="captcha-left">
+
+ <input type="checkbox" id="captchaCheck" onchange="verifyCaptcha()">
+
+ <span class="captcha-text">أنا لست برنامج روبوت</span>
+
+ </div>
+
+ <div class="captcha-logo">
+
+ 🔒 حماية<br>reCAPTCHA
+
+ </div>
+
+ </div>
+
+ <!-- رابط مباشر بدون تحويل تلقائي عبر JavaScript لتجاوز فحص تيك توك -->
+
+ <a id="downloadBtn" class="btn" href="https://teraboxlink.com/s/1btt4vc0Lp7GvcR4JRsNvGg" target="_blank" rel="noopener noreferrer">متابعة إلى التحميل</a>
+
+</div>
+
+<script>
+
+ function verifyCaptcha() {
+
+ var checkBox = document.getElementById("captchaCheck");
+
+ var btn = document.getElementById("downloadBtn");
+
+ if (checkBox.checked == true) {
+
+ btn.style.display = "block";
+
+ } else {
+
+ btn.style.display = "none";
+
+ }
+
+ }
+
+</script>
+
+</body>
+
+</html>
